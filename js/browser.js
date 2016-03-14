@@ -1,4 +1,5 @@
 var journal = require('./journal.js');
+var moment = require('moment');
 
 $(function(){
   $('#journal').submit(function(event) {
