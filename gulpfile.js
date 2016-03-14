@@ -4,14 +4,14 @@ var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
 
 gulp.task('concatInterface', function() {
-  return gulp.src(['./js/browser.js', './js/signup-interface.js'])
+  return gulp.src(['./js/browser.js'])
   .pipe(concat('allConcat.js'))
   .pipe(gulp.dest('./tmp'));
 });
 
-gulp.task('jsBrowserify', function() {
+gulp.task('jsBrowserify', ['concatInterface'] , function() {
   return browserify({entries: ['./tmp/allConcat.js'] })
     .bundle()
     .pipe(source('app.js'))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js'));
 });
