@@ -8,4 +8,4 @@ prompt.get(['title', 'body'], function(err, result){
   var journalEntry = new journal.Journal(title, body);
   console.log(journalEntry.title);
   console.log(journalEntry.body);
-})
+});

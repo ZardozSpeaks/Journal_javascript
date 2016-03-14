@@ -10,5 +10,5 @@ function Journal(title, body) {
 
 Journal.prototype.countWords = function() {
   var bodyArr = this.body.split(" ");
-  return bodyArr.length
-}
+  return bodyArr.length;
+};

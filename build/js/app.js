@@ -11,8 +11,8 @@ function Journal(title, body) {
 
 Journal.prototype.countWords = function() {
   var bodyArr = this.body.split(" ");
-  return bodyArr.length
-}
+  return bodyArr.length;
+};
 
 },{"moment":2}],2:[function(require,module,exports){
 //! moment.js
@@ -3705,7 +3705,6 @@ Journal.prototype.countWords = function() {
 }));
 },{}],3:[function(require,module,exports){
 var journal = require('./../js/journal.js');
-var moment = require('moment');
 
 $(function(){
   $('#journal').submit(function(event) {
@@ -3713,8 +3712,8 @@ $(function(){
     var title = $('#title').val();
     var body = $('#body').val();
     var output = new journal.Journal(title,body);
-    $('#post-area').append("<h1>" + output.title + "</h1>" + "<p>" + output.body + "</p>" + "<p>" + "Number of words in body: " + output.countWords() + "</p>" + "Time of entry: " + output.timeStamp + "</p>");
+    $('#post-area').append("<h1>" + output.title + "</h1>" + "<p>" + output.body + "</p>" + "<p>" + "Number of words in body: " + output.countWords() + "</p>" + "Time of entry: " + output.timeStamp + "</p><hr>");
   });
 });
 
-},{"./../js/journal.js":1,"moment":2}]},{},[3]);
+},{"./../js/journal.js":1}]},{},[3]);

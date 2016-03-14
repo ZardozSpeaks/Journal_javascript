@@ -1,5 +1,4 @@
 var journal = require('./../js/journal.js');
-var moment = require('moment');
 
 $(function(){
   $('#journal').submit(function(event) {
@@ -7,6 +6,6 @@ $(function(){
     var title = $('#title').val();
     var body = $('#body').val();
     var output = new journal.Journal(title,body);
-    $('#post-area').append("<h1>" + output.title + "</h1>" + "<p>" + output.body + "</p>" + "<p>" + "Number of words in body: " + output.countWords() + "</p>" + "Time of entry: " + output.timeStamp + "</p>");
+    $('#post-area').append("<h1>" + output.title + "</h1>" + "<p>" + output.body + "</p>" + "<p>" + "Number of words in body: " + output.countWords() + "</p>" + "Time of entry: " + output.timeStamp + "</p><hr>");
   });
 });
